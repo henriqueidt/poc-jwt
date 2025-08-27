@@ -1,11 +1,31 @@
 GET http://localhost:3000/users
 
-###
+### Successful login v1
 
 POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
   "email": "user@example.com",
+  "password": "password123"
+}
+
+### Invalid credentials v2
+
+POST http://localhost:3000/auth-v2/login
+Content-Type: application/json
+
+{
+  "email": "user@example.com",
+  "password": "password123"
+}
+
+### Successful login v2
+
+POST http://localhost:3000/auth-v2/login
+Content-Type: application/json
+
+{
+  "email": "john@example.com",
   "password": "password123"
 }
